@@ -1,7 +1,8 @@
 export default async function sitemap() {
-  const baseUrl = 'https://teqnoor.com';
+  // 1. Your primary website domain for all pages
+  const baseUrl = 'https://www.b2bseodigitalagency.co.uk';
 
-  // 1. Fetch dynamic blog posts from your TeqNoor blog endpoint
+  // 2. Fetch dynamic blog posts teqnoor
   let blogEntries = [];
   try {
     const res = await fetch('https://teqnoor.com/api/blogs', { cache: 'no-store' });
@@ -10,6 +11,7 @@ export default async function sitemap() {
 
     if (Array.isArray(posts)) {
       blogEntries = posts.map((post) => ({
+        // Even though blogs come from TeqNoor's database, their public URL is on your main site
         url: `${baseUrl}/blog/${post.slug}`,
         lastModified: post.updatedAt || post.created_at || new Date(),
         changeFrequency: 'weekly',
@@ -20,30 +22,21 @@ export default async function sitemap() {
     console.error("Sitemap Blog Fetch Error:", err);
   }
 
-  // 2. Define all static paths mapped precisely from your navigation menus
+  // 3. Define all your static pages on your main domain
   const staticPaths = [
-    // Main
     '',
     '/about',
     '/contact',
-
-    // Services Dropdown
     '/ai-seo',
     '/b2b-seo-services',
     '/b2b-seo-consultant',
     '/b2b-seo-audit',
-
-    // Industries Dropdown
     '/saas-seo',
     '/seo-for-accountants',
     '/seo-for-law-firms',
     '/healthcare-seo',
     '/seo-for-financial-services',
-
-    // Case Studies Dropdown
     '/wholesale-food-seo',
-
-    // Insights Dropdown
     '/blog',
   ];
 
