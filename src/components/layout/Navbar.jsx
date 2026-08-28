@@ -76,8 +76,8 @@ export default function Navbar() {
             className="relative h-16 w-52 flex items-center transition-opacity hover:opacity-80"
           >
             <Image
-              src="/images/logo2.png"
-              alt="Logo"
+              src="/images/b2b-logo.png"
+              alt="b2b Logo"
               width={150}
               height={50}
               priority

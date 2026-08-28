@@ -20,8 +20,8 @@ export default function Footer() {
         <div className="md:col-span-7 flex flex-col items-start">
           <div className="mb-4">
             <Image
-              src="/images/teqnoor-logo.png"
-              alt="TEQNOOR Logo"
+              src="/images/b2b-logo.png"
+              alt="b2b Logo"
               width={140} // Reduced slightly for better proportions
               height={35}
               style={{ height: "auto" }}
@@ -30,11 +30,9 @@ export default function Footer() {
             />
           </div>
           <p className="text-gray-500 text-[14px] leading-[1.6] mb-5 max-w-[500px]">
-            TEQNOOR is a leading provider of innovative IT solutions dedicated
-            to transforming businesses through technology. Established with a
-            vision to empower organizations with cutting-edge digital
-            capabilities, we specialize in delivering customized software
-            development, SEO and digital transformation services.
+            B2BSEO Digital Marketing Agency is a B2B SEO agency in London for
+            high value deals. We build the rankings, authority, and AI
+            visibility to put you on the shortlist.
           </p>
           {/* Social Icons */}
           <div className="flex gap-3">
