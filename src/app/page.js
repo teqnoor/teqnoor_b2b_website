@@ -3,6 +3,9 @@ import Home from "./Home";
 export const metadata = {
   title: "B2B SEO Agency UK | Rankings, Leads & AI | Teqnoor",
   description: "B2B SEO services that bring qualified leads, not just rankings. Consultant led, built for search and AI answers. Free SEO review, UK based.",
+  alternates: {
+    canonical: "https://www.b2bseodigitalagency.co.uk",
+  },
 };
 
 const faqSchema = {
