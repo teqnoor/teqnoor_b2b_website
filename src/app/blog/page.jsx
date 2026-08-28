@@ -61,7 +61,7 @@ export default function BlogListingPage() {
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight mb-4">
-            Teqnoor <span className="bg-gradient-to-r from-[#821fbf] to-[#9333EA] bg-clip-text text-transparent">Insights</span>
+            All <span className="bg-gradient-to-r from-[#821fbf] to-[#9333EA] bg-clip-text text-transparent">Insights</span>
           </h1>
           <p className="text-gray-600 text-base sm:text-lg">
             Explore our latest thoughts, guides, and digital marketing strategies.
