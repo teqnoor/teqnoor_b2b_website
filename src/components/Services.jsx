@@ -1,29 +1,33 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Services() {
-  const services = [
+ const services = [
     {
       title: "B2B SEO services",
-      desc: "The full programme. Technical, content, and authority work to rank the pages that bring leads.    ",
+      desc: "The full programme. Technical, content, and authority work to rank the pages that bring leads.",
       icon: "/images/4.png",
+      href: "/b2b-seo-services",
     },
     {
       title: "AI SEO (GEO)",
-      desc: "Get named and cited by ChatGPT, Gemini, Perplexity, and Google's AI Overviews, not just ranked. ",
+      desc: "Get named and cited by ChatGPT, Gemini, Perplexity, and Google's AI Overviews, not just ranked.",
       icon: "/images/2.png",
+      href: "/ai-seo",
     },
     {
       title: "B2B SEO consulting",
-      desc: "Direct access to a specialist who plans and guides the work, with no agency layers.    ",
+      desc: "Direct access to a specialist who plans and guides the work, with no agency layers.",
       icon: "/images/3.png",
+      href: "/b2b-seo-consultant",
     },
     {
       title: "Free B2B SEO audit",
       desc: "See what is holding your rankings back, and where the quick wins are.",
       icon: "/images/5.png",
+      href: "/b2b-seo-audit",
     },
-   
   ];
 
   return (
@@ -72,11 +76,12 @@ export default function Services() {
       {/* GRID */}
       <div className="max-w-[1240px] w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 z-10">
         {services.map((service, index) => (
-          <div
+          <Link
             key={index}
-            className="bg-[#111319] border border-[#1F232E]/60 rounded-[12px] p-7 flex flex-col items-start justify-start text-left space-y-4 hover:border-[#2C3242]/80 transition-colors duration-200"
+            href={service.href}
+            className="bg-[#111319] border border-[#1F232E]/60 rounded-[12px] p-7 flex flex-col items-start justify-start text-left space-y-4 hover:border-[#8A2BE2]/60 hover:translate-y-[-2px] transition-all duration-200 group cursor-pointer"
           >
-            <div className="w-[44px] h-[44px] rounded-[8px] bg-[#1A1131] flex items-center justify-center shrink-0">
+            <div className="w-[44px] h-[44px] rounded-[8px] bg-[#1A1131] flex items-center justify-center shrink-0 group-hover:bg-[#8A2BE2]/20 transition-colors">
               <Image
                 src={service.icon}
                 alt={service.title}
@@ -85,14 +90,14 @@ export default function Services() {
               />
             </div>
             <div className="space-y-1.5 w-full">
-              <h3 className="text-[16.5px] font-semibold text-white tracking-tight">
+              <h3 className="text-[16.5px] font-semibold text-white tracking-tight group-hover:text-[#8A2BE2] transition-colors">
                 {service.title}
               </h3>
               <p className="text-[14px] font-normal text-[#8A92A6]">
                 {service.desc}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
