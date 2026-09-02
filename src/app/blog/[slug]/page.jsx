@@ -74,7 +74,7 @@ export default function SingleBlogPostPage() {
   return (
     <article className="min-h-screen bg-gradient-to-br from-[#f8f7fc] via-[#f3f0fb] to-[#ede9fe] py-20 px-4 sm:px-6 font-sans">
       
-      {/* Global override style: Force remove all underlines and force color */}
+      {/* Global override style: Force remove all underlines, force color, and make content headings visible */}
       <style jsx global>{`
         .blog-content a,
         .blog-content a:link,
@@ -87,6 +87,28 @@ export default function SingleBlogPostPage() {
           border-bottom: none !important;
           font-weight: 600;
         }
+
+        /* Heading Visibility Fixes */
+        .blog-content h1,
+        .blog-content h2,
+        .blog-content h3,
+        .blog-content h4,
+        .blog-content h5,
+        .blog-content h6 {
+          color: #111827 !important;
+          font-weight: 800 !important;
+          line-height: 1.3 !important;
+          margin-top: 1.8em !important;
+          margin-bottom: 0.6em !important;
+          display: block !important;
+        }
+
+        .blog-content h1 { font-size: 2em !important; }
+        .blog-content h2 { font-size: 1.6em !important; }
+        .blog-content h3 { font-size: 1.35em !important; }
+        .blog-content h4 { font-size: 1.15em !important; }
+        .blog-content h5 { font-size: 1em !important; }
+        .blog-content h6 { font-size: 0.9em !important; }
       `}</style>
 
       <div className="max-w-4xl mx-auto pt-8 sm:pt-12">
